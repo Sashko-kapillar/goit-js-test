@@ -1,3 +1,5 @@
+"use strict";
+
 /*      =======   МАСИВ ОБ'ЄКТІВ   =======*/
 
 /* ====  const atTheOldToad = {
