@@ -39,16 +39,56 @@ function calculateTotalPrice(orderedItems) {
 console.log(calculateTotalPrice([12, 85, 37, 4]));
 
 function filterArray(numbers, value) {
+  const newArray = [];
   numbers.forEach(function (element) {
-    let newArray = [];
-    console.log(`${element}`);
     if (element > value) {
-      console.log(element);
-      // newArray = numbers.push(element);
+      newArray.push(element);
+      console.log(newArray);
     }
-    console.log(newArray);
   });
-  // return newArray;
+  return newArray;
 }
 
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+/* =======   СТРІЛОЧНІ ФУНКЦІЇ   ====== */
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const logMessage = (number, index) => {
+//   console.log(`Index ${index}, value ${number}`);
+// };
+// numbers.forEach(logMessage);
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(function (item) {
+//     totalPrice += item;
+//   });
+
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+calculateTotalPrice = (orderedItems) => {
+  let totalPrice = 0;
+  orderedItems.forEach((item) => {
+    totalPrice += item;
+  });
+  return totalPrice;
+};
+console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+filterArray = (numbers, value) => {
+  const filteredNumbers = [];
+
+  numbers.forEach((number) => {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  });
+
+  return filteredNumbers;
+};
 console.log(filterArray([1, 2, 3, 4, 5], 3));
