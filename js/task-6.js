@@ -1,30 +1,12 @@
-// const petya = {
-//   name: "Petya",
-//   showName() {
-//     console.log(this.name);
-//   },
-// };
-// petya.showName();
-
-const petya = {
-  name: "Petya",
-  showThis() {
-    console.log(this);
-  },
-  showName() {
-    console.log(this.name);
-  },
-};
-petya.showThis(); // {name: "Petya", showThis: ƒ, showName: ƒ}
-petya.showName();
+/* =======   This   ======= */
 
 const pizzaPalace = {
   pizzas: ["Supercheese", "Smoked", "Four meats"],
   checkPizza(pizzaName) {
-    return pizzas.includes(this.pizzas);
+    return this.pizzas.includes(pizzaName);
   },
   order(pizzaName) {
-    const isPizzaAvailable = checkPizza(this.pizzas);
+    const isPizzaAvailable = this.checkPizza(pizzaName);
 
     if (!isPizzaAvailable) {
       return `Sorry, there is no pizza named «${pizzaName}»`;
@@ -34,4 +16,16 @@ const pizzaPalace = {
   },
 };
 
-pizzaPalace.order("Four meats");
+console.log(pizzaPalace.checkPizza("Four meats"));
+
+console.log(pizzaPalace.order("Four meats"));
+
+const book = {
+  updateTitle(newTitle) {
+    console.log(this);
+  },
+};
+
+const update = book.updateTitle;
+
+update("Lord Of The Rings");
