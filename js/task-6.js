@@ -29,3 +29,15 @@ const book = {
 const update = book.updateTitle;
 
 update("Lord Of The Rings");
+
+/* =======   PROP   ======= */
+
+const apartment = {
+  rooms: 4,
+  floor: 2,
+  taxFree: false,
+};
+
+const condo = Object.create(apartment);
+condo.rooms = 3;
+console.log(condo.rooms);
