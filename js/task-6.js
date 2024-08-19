@@ -41,3 +41,18 @@ const apartment = {
 const condo = Object.create(apartment);
 condo.rooms = 3;
 console.log(condo.rooms);
+
+/* =======   CLASS   ======= */
+
+class User {
+  // Тіло класу
+}
+
+const mango = new User();
+console.log(mango); // {}
+
+const poly = new User();
+console.log(poly); // {}
+
+/* =======   CLASS  constructor ======= 
+метод constructor */
