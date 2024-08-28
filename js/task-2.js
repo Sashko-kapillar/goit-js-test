@@ -17,3 +17,10 @@ function checkFileExtension(fileName, ext) {
   }
 }
 console.log(checkFileExtension("styles.css", ".js"));
+
+function getFileName(file) {
+  const fileName = file.indexOf(".");
+  return `${fileName}`;
+}
+
+console.log(getFileName("index.html"));
