@@ -1,4 +1,4 @@
-/* google sheets no work*/
+/* google sheets no work  ===
 
 function getGalleryData() {
   const spreadsheetId = "1nN4z-PGNNkwQHKr-qOisLya7lHVbrFBlaU7zF1OIX6A";
@@ -33,4 +33,26 @@ function getGalleryData() {
 // Виклик функції для отримання та відображення даних
 getGalleryData();
 
-/* end google sheets */
+  =====   end google sheets */
+
+// Отримаємо елемент списку з класом "gallery"
+const gallery = document.querySelector(".gallery");
+
+// Створимо елемент списку <li>
+const listItem = document.createElement("li");
+
+// Створимо елемент зображення <img>
+const image = document.createElement("img");
+
+// Отримаємо пряме посилання на зображення
+const imageUrl =
+  "https://drive.google.com/file/d/1qh50pU1wTKC1uWhvGskRJxXiLkKP_c5Q/uc?export=download";
+
+// Встановимо атрибут src для зображення
+image.src = imageUrl;
+
+// Додамо зображення до елемента списку
+listItem.appendChild(image);
+
+// Додамо елемент списку до списку галереї
+gallery.appendChild(listItem);
