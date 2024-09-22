@@ -36,7 +36,32 @@
   background-color: rgb(9, 0, 250);
 }
 
-.my-button {
+.section {
+  padding: 120px;
+}
+
+.my-button,
+.btn {
   width: 200px;
-  height: 80px;
+  height: 40px;
+}
+
+.btn {
+  background-color: #f0000f;
+  /* transform: translate(50%, 50%); */
+  border: none;
+  color: beige;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  /* margin-bottom: 16px; */
+}
+
+.user-list {
+  margin: 0;
+  list-style: none;
+  padding: 24px;
+}
+
+.user-list li:not(:last-child) {
+  margin-bottom: 16px;
 }
